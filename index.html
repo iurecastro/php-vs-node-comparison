@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP vs Node.js - Complete Comparison Guide</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-code-slash me-2"></i>Backend Comparison
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comparison">Comparison</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#performance">Performance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#use-cases">Use Cases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#code">Code Examples</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center py-5">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold mb-3">PHP vs Node.js</h1>
+            <p class="lead mb-4">Technical Comparison for Modern Web Development</p>
+            <a href="#comparison" class="btn btn-primary btn-lg">Start Comparison</a>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="php-icon mb-3">
+                                <i class="bi bi-filetype-php display-1 text-primary"></i>
+                            </div>
+                            <h3 class="card-title">PHP</h3>
+                            <p class="card-text">
+                                The veteran server-side scripting language powering 77% of all websites.
+                                Born in 1994, it's the foundation of WordPress, Laravel, and Symfony.
+                            </p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-1">Synchronous</span>
+                                <span class="badge bg-primary me-1">Multi-process</span>
+                                <span class="badge bg-primary">Shared Hosting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="node-icon mb-3">
+                                <i class="bi bi-node-plus display-1 text-success"></i>
+                            </div>
+                            <h3 class="card-title">Node.js</h3>
+                            <p class="card-text">
+                                JavaScript runtime built on Chrome's V8 engine. Released in 2009,
+                                it revolutionized backend development with its non-blocking I/O model.
+                            </p>
+                            <div class="mt-3">
+                                <span class="badge bg-success me-1">Asynchronous</span>
+                                <span class="badge bg-success me-1">Event-driven</span>
+                                <span class="badge bg-success">Single-threaded</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section id="comparison" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Technical Comparison</h2>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Aspect</th>
+                            <th scope="col" class="text-center">PHP</th>
+                            <th scope="col" class="text-center">Node.js</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Execution Model</strong></td>
+                            <td class="php-cell">Synchronous (blocking I/O)</td>
+                            <td class="node-cell">Asynchronous (non-blocking I/O)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Concurrency Model</strong></td>
+                            <td class="php-cell">Multi-process (Apache/Nginx forks)</td>
+                            <td class="node-cell">Single-threaded Event Loop</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Performance I/O</strong></td>
+                            <td class="php-cell">Good for CPU-bound tasks</td>
+                            <td class="node-cell">Excellent for I/O-bound tasks</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Language</strong></td>
+                            <td class="php-cell">PHP only on backend</td>
+                            <td class="node-cell">JavaScript full-stack</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Package Manager</strong></td>
+                            <td class="php-cell">Composer (122k packages)</td>
+                            <td class="node-cell">NPM (2.1 million packages)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Learning Curve</strong></td>
+                            <td class="php-cell">Gentle, great for beginners</td>
+                            <td class="node-cell">Steeper (async programming)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Real-time Apps</strong></td>
+                            <td class="php-cell">Requires extra services</td>
+                            <td class="node-cell">Native WebSocket support</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hosting Cost</strong></td>
+                            <td class="php-cell">Lower (shared hosting)</td>
+                            <td class="node-cell">Higher (VPS/cloud required)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Performance Analysis</h2>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="performance-card p-4">
+                        <h4>Concurrent Connections</h4>
+                        <div class="progress my-3" style="height: 30px;">
+                            <div class="progress-bar bg-primary" style="width: 40%">PHP: ~200/process</div>
+                            <div class="progress-bar bg-success" style="width: 60%">Node.js: 10K+</div>
+                        </div>
+                        <p class="small">Node.js handles more concurrent connections efficiently</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="performance-card p-4">
+                        <h4>Memory Usage</h4>
+                        <div class="progress my-3" style="height: 30px;">
+                            <div class="progress-bar bg-primary" style="width: 70%">PHP: Higher per process</div>
+                            <div class="progress-bar bg-success" style="width: 30%">Node.js: Lower shared</div>
+                        </div>
+                        <p class="small">PHP uses more RAM with multiple processes</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="performance-card p-4">
+                        <h4>Startup Time</h4>
+                        <div class="progress my-3" style="height: 30px;">
+                            <div class="progress-bar bg-primary" style="width: 60%">PHP: Per request</div>
+                            <div class="progress-bar bg-success" style="width: 40%">Node.js: Once</div>
+                        </div>
+                        <p class="small">Node.js starts once and handles all requests</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">When to Use Which?</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0"><i class="bi bi-check-circle me-2"></i>Choose PHP For:</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="bi bi-wordpress text-primary me-2"></i>
+                                    Content Management Systems (WordPress, Drupal)
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-shop text-primary me-2"></i>
+                                    E-commerce platforms (Magento, WooCommerce)
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-globe text-primary me-2"></i>
+                                    Traditional websites with shared hosting
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-people text-primary me-2"></i>
+                                    Teams familiar with LAMP stack
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-cash-coin text-primary me-2"></i>
+                                    Budget-constrained projects
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <h4 class="mb-0"><i class="bi bi-lightning-charge me-2"></i>Choose Node.js For:</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="bi bi-chat-dots text-success me-2"></i>
+                                    Real-time applications (chat, collaboration)
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-phone text-success me-2"></i>
+                                    APIs for mobile applications
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-puzzle text-success me-2"></i>
+                                    Microservices architecture
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-arrow-repeat text-success me-2"></i>
+                                    Data streaming applications
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-braces text-success me-2"></i>
+                                    Full-stack JavaScript teams
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Examples -->
+    <section id="code" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Code Comparison</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="code-example p-4 rounded">
+                        <h4 class="text-primary mb-3">
+                            <i class="bi bi-filetype-php me-2"></i>PHP - Synchronous
+                        </h4>
+                        <pre class="bg-black p-3 rounded"><code class="text-white">
+// Each operation blocks execution
+$data = file_get_contents('file.txt');
+echo "Read file: " . $data;
+
+$result = $db->query('SELECT * FROM users');
+// Waits for database response
+// Blocks other requests
+
+// Simple but blocks during I/O
+                        </code></pre>
+                        <p class="mt-3">Each request = new PHP process. Blocking I/O operations.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="code-example p-4 rounded">
+                        <h4 class="text-success mb-3">
+                            <i class="bi bi-node-plus me-2"></i>Node.js - Asynchronous
+                        </h4>
+                        <pre class="bg-black p-3 rounded"><code class="text-white">
+// Non-blocking operations
+fs.readFile('file.txt', (err, data) => {
+    console.log('Read file:', data);
+});
+
+db.query('SELECT * FROM users', (err, result) => {
+    // Callback when ready
+});
+
+// Continues executing other code
+// while waiting for I/O
+                        </code></pre>
+                        <p class="mt-3">Single process handles all requests. Non-blocking Event Loop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Conclusion</h2>
+            <p class="lead mb-4">
+                <strong>PHP</strong> excels in traditional web development with its maturity and simplicity,
+                while <strong>Node.js</strong> shines in real-time applications and I/O-heavy workloads
+                with its non-blocking architecture.
+            </p>
+            <p>
+                The choice depends on your project requirements, team expertise,
+                and performance needs. Both have strong ecosystems and community support.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>About This Comparison</h5>
+                    <p>Technical comparison for developers evaluating backend technologies. Created for educational purposes.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <h5>Links</h5>
+                    <a href="https://www.php.net/" class="text-white me-3" target="_blank">
+                        <i class="bi bi-link-45deg"></i> PHP Official
+                    </a>
+                    <a href="https://nodejs.org/" class="text-white" target="_blank">
+                        <i class="bi bi-link-45deg"></i> Node.js Official
+                    </a>
+                    <p class="mt-3">
+                        <i class="bi bi-github me-2"></i>
+                        <a href="https://github.com/iurecastro" class="text-white">View on GitHub</a>
+                    </p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <p class="text-center mb-0">&copy; 2026 Backend Technology Comparison.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
